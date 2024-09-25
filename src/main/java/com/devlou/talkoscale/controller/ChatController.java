@@ -34,6 +34,6 @@ public class ChatController {
     @MessageMapping("/join")
     public void userJoined(Message message) {
         log.info("{} has joined the chat.", message.getUser());
-        messagingTemplate.convertAndSend("/topic/userJoined", message);
+        messagingTemplate.convertAndSend("/topic/join", message);
     }
 }
